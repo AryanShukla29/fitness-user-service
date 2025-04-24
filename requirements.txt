@@ -1,0 +1,6 @@
+txt
+
+flask
+pymongo
+pika
+flash-cors

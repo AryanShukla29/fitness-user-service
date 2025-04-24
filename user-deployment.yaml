@@ -1,0 +1,24 @@
+apiVersion:app/v1
+kind:Deployment
+metadata:
+  name: user-service
+spec:
+  replicas:1
+  selector:
+  matchLabels:
+   app:user-service
+  template:
+   metadata:
+    labels:
+     app:user-service
+    spec:
+     containers:
+     - name:user-service
+       image:user-service
+       ports:
+       - containerPort: 5001
+       env:
+       - name: MONGO_URI
+         value:"your_mongodb_atlas_uri"
+       - name: RABBITMQ_URI
+         value:"your_cloudamqp_uri"
