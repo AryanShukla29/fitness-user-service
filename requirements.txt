@@ -1,6 +1,4 @@
-txt
-
-flask
-pymongo
-pika
-flash-cors
+fastapi
+uvicorn
+pydantic
+motor  # For MongoDB integration
